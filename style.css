@@ -1,0 +1,118 @@
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #002d42;
+}
+
+.sea-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #005f73, #0a9396, #94d2bd);
+}
+
+.water {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    animation: waterMove 10s infinite linear;
+}
+
+@keyframes waterMove {
+    from { transform: translateY(-20px); }
+    to { transform: translateY(20px); }
+}
+
+.fish {
+    position: absolute;
+    width: 50px;
+    height: 30px;
+    background-color: #ff6b6b;
+    border-radius: 50% 50% 50% 0;
+    transform: rotate(-45deg);
+    animation: fishSwim 5s infinite linear;
+}
+
+.fish:before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.fish1 {
+    top: 20%;
+    left: 10%;
+    animation-duration: 8s;
+}
+
+.fish2 {
+    top: 50%;
+    left: 80%;
+    animation-duration: 12s;
+    animation-delay: 3s;
+}
+
+.fish3 {
+    top: 80%;
+    left: 30%;
+    animation-duration: 10s;
+    animation-delay: 6s;
+}
+
+@keyframes fishSwim {
+    0% { transform: translateX(0) translateY(0) rotate(-45deg); }
+    50% { transform: translateX(100px) translateY(10px) rotate(-40deg); }
+    100% { transform: translateX(0) translateY(0) rotate(-45deg); }
+}
+
+.bubble {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    animation: bubbleMove 5s infinite linear;
+}
+
+.bubble1 {
+    left: 20%;
+    animation-duration: 4s;
+    animation-delay: 0s;
+}
+
+.bubble2 {
+    left: 50%;
+    animation-duration: 6s;
+    animation-delay: 1s;
+}
+
+.bubble3 {
+    left: 70%;
+    animation-duration: 3s;
+    animation-delay: 2s;
+}
+
+.bubble4 {
+    left: 90%;
+    animation-duration: 5s;
+    animation-delay: 3s;
+}
+
+@keyframes bubbleMove {
+    0% { bottom: -20px; transform: translateX(0); }
+    50% { transform: translateX(10px); }
+    100% { bottom: 100%; transform: translateX(0); }
+}
